@@ -3,8 +3,8 @@ module.exports = {
     resolve: {
       // extensions: [],
       // 配置别名
+      // 不需要配置 '@': 'src'，配置了这一项反而会报错
       alias: {
-        '@': 'src',
         'assets': '@/assets',
         'common': '@/common',
         'components': '@/components',

@@ -4,12 +4,14 @@
     <nav-bar class="header">
       <div slot="center">购物街</div>
     </nav-bar>
+    <home-swiper :banners="banners"></home-swiper>
   </div>
 </template>
 
 <script>
 import NavBar from 'components/common/navbar/NavBar' 
 import { getHomeMultidata } from 'network/home'
+import HomeSwiper from './childComps/HomeSwiper'
 export default {
   data () {
     return {
@@ -18,7 +20,8 @@ export default {
     }
   },
   components: {
-    NavBar
+    NavBar,
+    HomeSwiper
   },
   created () {
     getHomeMultidata()
